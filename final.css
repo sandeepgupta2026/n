@@ -1,0 +1,542 @@
+/* ================= PAGE-FINAL ================= */
+/* ==========================================
+            RESET
+========================================== */
+
+.page-final * {
+margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.page-final html,
+.page-final {
+width:100%;
+    height:100%;
+    overflow:hidden;
+
+    font-family:"Poppins",sans-serif;
+
+    background:#000;
+
+    color:#fff;
+} 
+
+/* ==========================================
+            SKY
+========================================== */
+
+.page-final #sky {
+position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    z-index:-10;
+}
+
+/* ==========================================
+            STARS
+========================================== */
+
+.page-final #stars {
+position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+}
+
+.page-final .star {
+position:absolute;
+
+    border-radius:50%;
+
+    background:rgb(253, 253, 253);
+
+    box-shadow:
+
+    0 0 5px rgb(244, 239, 239),
+
+    0 0 10px rgb(8, 0, 0),
+
+    0 0 18px rgb(9, 0, 0);
+
+     
+}
+
+
+50%{
+
+opacity:1;
+
+transform:scale(1.4);
+
+}
+
+100%{
+
+opacity:.3;
+
+transform:scale(.8);
+
+}
+}
+
+/* ==========================================
+            CLOUDS
+========================================== */
+
+.page-final #clouds {
+position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+}
+
+.page-final .cloud {
+position:absolute;
+
+    width:260px;
+
+    height:70px;
+
+    border-radius:50px;
+
+    background:
+
+    rgba(255,255,255,.05);
+
+    filter:blur(25px);
+
+    animation:moveCloud linear infinite;
+}
+
+@keyframes moveCloud {
+from{
+
+transform:translateX(-350px);
+
+}
+
+to{
+
+transform:translateX(calc(100vw + 350px));
+
+}
+}
+
+/* ==========================================
+            CANVAS
+========================================== */
+
+.page-final #canvas {
+position:fixed;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    pointer-events:none;
+}
+
+/* ==========================================
+        COMMON SECTION
+========================================== */
+
+.page-final section {
+position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    text-align:center;
+}
+
+/* Hide all except opening */
+
+.page-final #giftSection,
+.page-final #heartSection,
+.page-final #nameSection {
+display:none;
+}
+
+/* ==========================================
+            OPENING SECTION
+========================================== */
+
+.page-final #openingSection {
+background:rgba(0,0,0,.35);
+    backdrop-filter:blur(3px);
+}
+
+.page-final #openingSection h2 {
+font-size:32px;
+    color:#ffd54f;
+    letter-spacing:4px;
+    margin-bottom:20px;
+}
+
+.page-final #openingSection h1 {
+font-family:"Great Vibes",cursive;
+    font-size:85px;
+
+    color:#f6f5f5;
+
+    text-shadow:
+    0 0 20px #ff4da6,
+    0 0 40px #ff4da6,
+    0 0 80px #ff4da6;
+
+    animation:titleGlow 2s infinite alternate;
+}
+
+@keyframes titleGlow {
+from{
+
+        transform:scale(1);
+
+        text-shadow:
+        0 0 20px hotpink,
+        0 0 40px hotpink;
+
+    }
+
+    to{
+
+        transform:scale(1.05);
+
+        text-shadow:
+        0 0 35px hotpink,
+        0 0 70px hotpink;
+
+    }
+}
+
+/* ==========================================
+            GIFT SECTION
+========================================== */
+
+.page-final #giftSection {
+display:none;
+
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+.page-final #giftSection h1 {
+font-size:68px;
+
+    font-family:"Great Vibes",cursive;
+
+    color:#FFD54F;
+
+    text-shadow:
+    0 0 20px gold,
+    0 0 50px orange;
+}
+
+.page-final #giftSection p {
+margin-top:15px;
+
+    font-size:22px;
+
+    color:#eeeeee;
+}
+
+/* ==========================================
+            GIFT
+========================================== */
+
+.page-final #gift {
+position:relative;
+
+    width:240px;
+    height:240px;
+
+    margin:60px 0;
+
+    animation:giftFloat 3s ease-in-out infinite;
+}
+
+/* Box */
+
+.page-final .box {
+position:absolute;
+
+    bottom:0;
+
+    width:100%;
+    height:170px;
+
+    border-radius:0 0 20px 20px;
+
+    background:
+    linear-gradient(
+    180deg,
+    #ff5b99,
+    #d81b60);
+
+    box-shadow:
+
+    0 25px 50px rgba(240, 237, 237, 0.45);
+}
+
+/* Lid */
+
+.page-final .lid {
+position:absolute;
+
+    width:100%;
+    height:72px;
+
+    border-radius:20px;
+
+    background:
+    linear-gradient(
+    #ff84b4,
+    #ff4f92);
+
+    transform-origin:bottom center;
+
+    z-index:5;
+}
+
+/* Ribbon */
+
+.page-final .ribbonVertical {
+position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:18px;
+    height:100%;
+
+    background:gold;
+}
+
+.page-final .ribbonHorizontal {
+position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:100%;
+    height:18px;
+
+    background:gold;
+}
+
+/* Bow */
+
+.page-final .bow {
+position:absolute;
+
+    left:50%;
+    top:-25px;
+
+    transform:translateX(-50%);
+
+    font-size:58px;
+}
+
+/* ==========================================
+        MAGIC LIGHT
+========================================== */
+
+.page-final .magicLight {
+position:absolute;
+
+    left:50%;
+    bottom:65px;
+
+    transform:translateX(-50%);
+
+    width:70px;
+    height:70px;
+
+    border-radius:50%;
+
+    background:gold;
+
+    filter:blur(40px);
+
+    opacity:.25;
+}
+
+/* ==========================================
+            BUTTON
+========================================== */
+
+.page-final #openGift {
+padding:18px 48px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    color:#f8f7f7;
+
+    background:
+    linear-gradient(
+    45deg,
+    #ff006e,
+    #ffbe0b);
+
+    box-shadow:
+
+    0 0 20px #ff006e;
+
+    transition:.35s;
+}
+
+.page-final #openGift:hover {
+transform:scale(1.08);
+
+    box-shadow:
+
+    0 0 30px #ff006e,
+    0 0 60px gold;
+}
+
+/* ==========================================
+        GIFT FLOAT
+========================================== */
+
+@keyframes giftFloat {
+0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+}
+
+/* ==========================================
+            HEART SECTION
+========================================== */
+
+.page-final #heartSection {
+display:none;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+.page-final #heartSection h2 {
+font-size:58px;
+
+    font-family:"Great Vibes",cursive;
+
+    color:#ff5ca8;
+
+    text-shadow:
+    0 0 20px hotpink,
+    0 0 45px hotpink;
+}
+
+/* ==========================================
+            NAME SECTION
+========================================== */
+
+.page-final #nameSection {
+display:none;
+    justify-content:center;
+    align-items:center;
+}
+
+.page-final #nameCanvas {
+width:100%;
+    height:100%;
+}
+
+/* ==========================================
+            FADE ANIMATION
+========================================== */
+
+
+
+
+.page-final .fadeIn {
+animation:fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+from{
+
+        opacity:0;
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+}
+
+/* ==========================================
+            MOBILE
+========================================== */
+
+@media(max-width:768px) {
+.page-final #openingSection h1 {
+font-size:55px;
+}
+
+.page-final #giftSection h1 {
+font-size:45px;
+}
+
+.page-final #gift {
+width:180px;
+    height:180px;
+}
+
+.page-final .box {
+height:130px;
+}
+
+
+
+
+
+.page-final #heartSection h2 {
+font-size:38px;
+}
+
+.page-final #openGift {
+font-size:17px;
+
+    padding:15px 30px;
+}
+}
+
